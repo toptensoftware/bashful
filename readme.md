@@ -28,12 +28,12 @@ Window Terminal is the way to go.  If you don't have, [get it](https://learn.mic
 At first I was going to use bash that comes with Windows, but I think Git Bash is better
 configured out of the box.  Here's the changes I made.
 
-1. Run Windows Terminal and choose the "Git Bash" prompt profile (it should appear
-   automagically).
+1. Run Windows Terminal and open the "Git Bash" profile (if you have git installed the profile
+   should already exist).
 
-2. With text editor (code, vi, whatever...) open `~/.bashrc` and add the following to get a more concise
-   prompt (just path and git status) and make `ls` list all files, in long form, with human
-   readable file sizes.
+2. With a text editor (code, vi, whatever...) open (or create) `~/.bashrc` and add the following.
+   This changes to a more concise prompt (just path and git status) and makes `ls` list all files,
+   in long form, with human readable file sizes.
 
     ```bash
     export PS1='\[\033]0;bash $PWD\007\]\n\[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]$ '
@@ -43,15 +43,21 @@ configured out of the box.  Here's the changes I made.
 
    Or, copy the file from this repository.
 
-3. With text editor, open `~/.inputrc` and add.  This stops the super annoying window flash
-   and/or bell, enables case insensitive tab completion and makes tab completion similar to 
-   how cmd.exe tab completion works (which I prefer).
+3. With a text editor, open `~/.inputrc` and add the following to:
+
+    * This stops the super annoying  window flash and/or bell, 
+    * Enables case insensitive tab completion
+    * makes tab completion more like to how cmd.exe tab completion works (which I prefer).
+    * allows searching command history by typing the first few letters of a previous command 
+      and pressing Page Up/Down.
 
     ```
     set bell-style none
     set completion-ignore-case On
     TAB: menu-complete
     "\e[Z": menu-complete-backward
+    "\e[5~": history-search-backward
+    "\e[6~": history-search-forward
     ```
 
    Or, copy the file from this repository
@@ -75,7 +81,7 @@ In the root settings section, usually at end of the file before the last closing
 "centerOnLaunch": true,
 ```
 
-(Without this Windows Terminal sometimes loads partially offscreen).
+Without this Windows Terminal sometimes loads partially offscreen.
 
 In the section `{ "profiles": { "list": [ ] } } `, replace the existing
 Git Bash entry with the following (adjust starting directory as appropriate).
@@ -138,5 +144,34 @@ Finally, replace the `"defaultProfile"` setting to set the default profile:
 See `settings.json` in this repo for full file example (but you probably don't want
 to just overwrite your file as it likely has other profiles configured that you 
 might want to keep).
+
+
+
+## Bash on Windows
+
+A couple of tips for working with bash on Windows
+
+* Backslashes in paths are supported sometimes... best to just change habit and start
+  using forward slashes everywhere
+* Drive letters are available as `/c/` for `c:\` etc...
+* `~` is mapped to your home directory (eg: `C:\Users\USERNAME\`)  (Yay!)
+* `cd` by itself changes you to your home directory
+* Be careful using `cp` & `mv` - if you're not used to them, you can do damage.
+
+
+## Handy Windows Terminal Shortcuts
+
+Windows Terminal is pretty nice and it's worth learning some of the more useful 
+shortcuts: (`Ctrl+Shift+P` to learn more)
+
+* `Alt+Shift+'+'` - split right
+* `Alt+Shift+'-'` - split down
+* `Ctrl+Shift+W` - close split pane, or current tab if not split
+* `Alt+Left/Right/Up/Down` - switch panes
+* `Ctrl+Shift+T` - new tab
+* `Ctrl+Shift+P` - command palette
+* `Ctrl+Shift+Space` - new tab menu
+* `Ctrl+Tab`/`Ctrl+Shift+Tab` - switch tabs
+* `Ctrl+Shift+M` - toggle mark mode (select for copy)
 
 
