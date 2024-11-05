@@ -8,13 +8,10 @@ Setting up a nice Bash prompt in Windows.
 
 ## Background
 
-Recently I decide to switch to using bash on windows.  After years of mixing, Windows
-with cmd.exe and Linux with bash, I decided to settle on one and stick with it... and
-of course bash was the obvious choice.
+Recently I decide to switch to using bash on windows.  After years of mixing Windows/cmd.exe 
+and Linux/bash, I decided to settle on one and stick with it... and bash was the obvious choice.
 
-This repo is mainly so I can reproduce this setup on new machines, but feel free to
-copy or suggest other improvements.
-
+This repo is to remind me how to set it up next time.
 
 
 ## Windows Terminal
