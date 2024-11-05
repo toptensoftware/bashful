@@ -1,0 +1,112 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": "find",
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{4e6ab04a-722b-4a51-962f-e0d099e44d51}",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": {},
+        "list": 
+        [
+            {
+                "font": 
+                {
+                    "face": "Consolas",
+                    "size": 11
+                },
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt",
+                "startingDirectory": "%USERPROFILE%/Projects",
+                "tabColor": "#0037DA"
+            },
+            {
+                "colorScheme": "Campbell on Green",
+                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
+                "guid": "{4e6ab04a-722b-4a51-962f-e0d099e44d51}",
+                "hidden": false,
+                "icon": "C:\\Program Files\\Git\\128x128.png",
+                "name": "Bash",
+                "opacity": 90,
+                "startingDirectory": "C:\\Users\\Brad\\Projects",
+                "tabColor": "#0b6008",
+                "useAcrylic": false
+            },
+            {
+                "guid": "{5a51818b-3330-558c-b579-d2f7ae1af328}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+            "background": "#002000",
+            "black": "#0C0C0C",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#CCCCCC",
+            "green": "#13A10E",
+            "name": "Campbell on Green",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#C19C00"
+        }
+    ],
+    "tabSwitcherMode": "mru",
+    "theme": "dark",
+    "themes": [],
+    "centerOnLaunch": true
+}
